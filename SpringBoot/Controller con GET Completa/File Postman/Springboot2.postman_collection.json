@@ -1,0 +1,92 @@
+{
+  "info": {
+    "_postman_id": "78644b07-60e6-421f-853d-9a705c1113d8",
+    "name": "Springboot2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57511777",
+    "_collection_link": "https://go.postman.co/collection/57511777-78644b07-60e6-421f-853d-9a705c1113d8?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Saluto v2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/v2/ciao/Lombardia?nome=Giuseppe",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "v2",
+            "ciao",
+            "Lombardia"
+          ],
+          "query": [
+            {
+              "key": "nome",
+              "value": "Giuseppe"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Saluto v2",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/v2/ciao/Lombardia?nome=Giuseppe",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "v2",
+                "ciao",
+                "Lombardia"
+              ],
+              "query": [
+                {
+                  "key": "nome",
+                  "value": "Giuseppe"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "99"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 19 Aug 2026 15:48:50 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"nome\": \"Giuseppe\",\n    \"provincia\": \"Lombardia\",\n    \"saluto\": \"Ciao Giuseppe, com'è il tempo in Lombardia?\"\n}"
+        }
+      ]
+    }
+  ]
+}
