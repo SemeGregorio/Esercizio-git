@@ -1,60 +1,46 @@
 {
   "info": {
-    "_postman_id": "78644b07-60e6-421f-853d-9a705c1113d8",
-    "name": "Springboot2",
+    "_postman_id": "a3dfa1a3-61f5-4eab-9065-b781949933a8",
+    "name": "Springboot3",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "57511777",
-    "_collection_link": "https://go.postman.co/collection/57511777-78644b07-60e6-421f-853d-9a705c1113d8?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/57511777-a3dfa1a3-61f5-4eab-9065-b781949933a8?source=collection_link"
   },
   "item": [
     {
-      "name": "Saluto v2",
+      "name": "Saluto v3",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/v2/ciao/Lombardia?nome=Giuseppe",
+          "raw": "http://localhost:8080/v3/ciao",
           "protocol": "http",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "v2",
-            "ciao",
-            "Lombardia"
-          ],
-          "query": [
-            {
-              "key": "nome",
-              "value": "Giuseppe"
-            }
+            "v3",
+            "ciao"
           ]
         }
       },
       "response": [
         {
-          "name": "Saluto v2",
+          "name": "Saluto v3",
           "originalRequest": {
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:8080/v2/ciao/Lombardia?nome=Giuseppe",
+              "raw": "http://localhost:8080/v3/ciao",
               "protocol": "http",
               "host": [
                 "localhost"
               ],
               "port": "8080",
               "path": [
-                "v2",
-                "ciao",
-                "Lombardia"
-              ],
-              "query": [
-                {
-                  "key": "nome",
-                  "value": "Giuseppe"
-                }
+                "v3",
+                "ciao"
               ]
             }
           },
@@ -64,15 +50,15 @@
           "header": [
             {
               "key": "Content-Type",
-              "value": "application/json"
+              "value": "text/plain;charset=UTF-8"
             },
             {
               "key": "Content-Length",
-              "value": "99"
+              "value": "18"
             },
             {
               "key": "Date",
-              "value": "Wed, 19 Aug 2026 15:48:50 GMT"
+              "value": "Thu, 20 Aug 2026 16:15:59 GMT"
             },
             {
               "key": "Keep-Alive",
@@ -84,7 +70,7 @@
             }
           ],
           "cookie": [],
-          "body": "{\n    \"nome\": \"Giuseppe\",\n    \"provincia\": \"Lombardia\",\n    \"saluto\": \"Ciao Giuseppe, com'è il tempo in Lombardia?\"\n}"
+          "body": "Ciao dal database!"
         }
       ]
     }
