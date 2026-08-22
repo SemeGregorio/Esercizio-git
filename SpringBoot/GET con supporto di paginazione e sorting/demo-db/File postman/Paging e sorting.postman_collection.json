@@ -1,0 +1,367 @@
+{
+  "info": {
+    "_postman_id": "056e91b7-eadc-4c23-bf91-4dbb8846c56f",
+    "name": "Paging e sorting",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57511777",
+    "_collection_link": "https://go.postman.co/collection/57511777-056e91b7-eadc-4c23-bf91-4dbb8846c56f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Controllo della prima pagina con massimo 3 elementi",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cars?page=0&size=3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cars"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Controllo della prima pagina con massimo 3 elementi",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/cars?page=0&size=3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cars"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "587"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 22 Aug 2026 15:19:21 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"content\": [\n        {\n            \"color\": \"BLACK\",\n            \"description\": \"Volkswagen Golf\",\n            \"id\": 1,\n            \"modelName\": \"Golf\",\n            \"type\": \"HATCHBACK\"\n        },\n        {\n            \"color\": \"WHITE\",\n            \"description\": \"Tesla Model Y\",\n            \"id\": 2,\n            \"modelName\": \"Model Y\",\n            \"type\": \"SUV\"\n        },\n        {\n            \"color\": \"BLUE\",\n            \"description\": \"Honda Civic\",\n            \"id\": 3,\n            \"modelName\": \"Civic\",\n            \"type\": \"SEDAN\"\n        }\n    ],\n    \"empty\": false,\n    \"first\": true,\n    \"last\": false,\n    \"number\": 0,\n    \"numberOfElements\": 3,\n    \"pageable\": {\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 3,\n        \"paged\": true,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"unpaged\": false\n    },\n    \"size\": 3,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"totalElements\": 10,\n    \"totalPages\": 4\n}"
+        }
+      ]
+    },
+    {
+      "name": "seconda pagina",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cars?page=1&size=3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cars"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "size",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "seconda pagina",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/cars?page=1&size=3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cars"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "581"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 22 Aug 2026 15:20:00 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"content\": [\n        {\n            \"color\": \"RED\",\n            \"description\": \"Audi A3\",\n            \"id\": 4,\n            \"modelName\": \"A3\",\n            \"type\": \"SEDAN\"\n        },\n        {\n            \"color\": \"GREEN\",\n            \"description\": \"Ford Mustang\",\n            \"id\": 5,\n            \"modelName\": \"Mustang\",\n            \"type\": \"COUPE\"\n        },\n        {\n            \"color\": \"WHITE\",\n            \"description\": \"Volkswagen Polo\",\n            \"id\": 6,\n            \"modelName\": \"Polo\",\n            \"type\": \"HATCHBACK\"\n        }\n    ],\n    \"empty\": false,\n    \"first\": false,\n    \"last\": false,\n    \"number\": 1,\n    \"numberOfElements\": 3,\n    \"pageable\": {\n        \"offset\": 3,\n        \"pageNumber\": 1,\n        \"pageSize\": 3,\n        \"paged\": true,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"unpaged\": false\n    },\n    \"size\": 3,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"totalElements\": 10,\n    \"totalPages\": 4\n}"
+        }
+      ]
+    },
+    {
+      "name": "Sorting crescente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cars?page=0&size=3&sort=modelName,asc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cars"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "3"
+            },
+            {
+              "key": "sort",
+              "value": "modelName,asc"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Sorting crescente",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/cars?page=0&size=3&sort=modelName,asc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cars"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "3"
+                },
+                {
+                  "key": "sort",
+                  "value": "modelName,asc"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "573"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 22 Aug 2026 15:21:00 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"content\": [\n        {\n            \"color\": \"RED\",\n            \"description\": \"Audi A3\",\n            \"id\": 4,\n            \"modelName\": \"A3\",\n            \"type\": \"SEDAN\"\n        },\n        {\n            \"color\": \"BLUE\",\n            \"description\": \"Honda Civic\",\n            \"id\": 3,\n            \"modelName\": \"Civic\",\n            \"type\": \"SEDAN\"\n        },\n        {\n            \"color\": \"RED\",\n            \"description\": \"Renault Clio\",\n            \"id\": 8,\n            \"modelName\": \"Clio\",\n            \"type\": \"HATCHBACK\"\n        }\n    ],\n    \"empty\": false,\n    \"first\": true,\n    \"last\": false,\n    \"number\": 0,\n    \"numberOfElements\": 3,\n    \"pageable\": {\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 3,\n        \"paged\": true,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"unpaged\": false\n    },\n    \"size\": 3,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"totalElements\": 10,\n    \"totalPages\": 4\n}"
+        }
+      ]
+    },
+    {
+      "name": "Sorting decrescente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cars?page=0&size=3&sort=modelName,desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cars"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "3"
+            },
+            {
+              "key": "sort",
+              "value": "modelName,desc"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Sorting decrescente",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/cars?page=0&size=3&sort=modelName,desc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "cars"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "3"
+                },
+                {
+                  "key": "sort",
+                  "value": "modelName,desc"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "580"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 22 Aug 2026 15:22:23 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"content\": [\n        {\n            \"color\": \"BLUE\",\n            \"description\": \"BMW Serie 3\",\n            \"id\": 9,\n            \"modelName\": \"Serie 3\",\n            \"type\": \"SEDAN\"\n        },\n        {\n            \"color\": \"BLACK\",\n            \"description\": \"Audi Q5\",\n            \"id\": 7,\n            \"modelName\": \"Q5\",\n            \"type\": \"SUV\"\n        },\n        {\n            \"color\": \"WHITE\",\n            \"description\": \"Volkswagen Polo\",\n            \"id\": 6,\n            \"modelName\": \"Polo\",\n            \"type\": \"HATCHBACK\"\n        }\n    ],\n    \"empty\": false,\n    \"first\": true,\n    \"last\": false,\n    \"number\": 0,\n    \"numberOfElements\": 3,\n    \"pageable\": {\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 3,\n        \"paged\": true,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"unpaged\": false\n    },\n    \"size\": 3,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"totalElements\": 10,\n    \"totalPages\": 4\n}"
+        }
+      ]
+    }
+  ]
+}
