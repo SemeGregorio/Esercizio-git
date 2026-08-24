@@ -1,0 +1,357 @@
+{
+  "info": {
+    "_postman_id": "8b52ef34-32b4-49b9-bc14-560946f3984f",
+    "name": "CRUD TEST",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57511777",
+    "_collection_link": "https://go.postman.co/collection/57511777-8b52ef34-32b4-49b9-bc14-560946f3984f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Studenti",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Crea lo studente",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Mario\",\r\n    \"surname\": \"Rossi\",\r\n    \"working\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/students",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "56"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Aug 2026 13:23:31 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"name\": \"Mario\",\n    \"surname\": \"Rossi\",\n    \"working\": true\n}"
+        },
+        {
+          "name": "Cambia l'id",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 10\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/students/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "57"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Aug 2026 13:37:05 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 10,\n    \"name\": \"Mario\",\n    \"surname\": \"Rossi\",\n    \"working\": true\n}"
+        },
+        {
+          "name": "Controlla la nuova posizione",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/students/10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students",
+                "10"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "57"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Aug 2026 13:39:47 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 10,\n    \"name\": \"Mario\",\n    \"surname\": \"Rossi\",\n    \"working\": true\n}"
+        },
+        {
+          "name": "Controlla la vecchia posizione",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/students/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students",
+                "1"
+              ]
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Aug 2026 13:40:09 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"timestamp\": \"2026-08-24T13:40:09.453Z\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/students/1\"\n}"
+        },
+        {
+          "name": "Cambia lo stato lavorativo",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/students/10/working?working=false",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students",
+                "10",
+                "working"
+              ],
+              "query": [
+                {
+                  "key": "working",
+                  "value": "false"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "58"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Aug 2026 13:40:46 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 10,\n    \"name\": \"Mario\",\n    \"surname\": \"Rossi\",\n    \"working\": false\n}"
+        },
+        {
+          "name": "Elimina lo studente",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/students/10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students",
+                "10"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "0"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Aug 2026 13:41:31 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        },
+        {
+          "name": "Controlla se ci sono studenti",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/students",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "2"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Aug 2026 13:42:04 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[]"
+        }
+      ]
+    }
+  ]
+}
